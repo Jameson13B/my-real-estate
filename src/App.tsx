@@ -1,27 +1,23 @@
-import { useState } from "react"
-import reactLogo from "./assets/react.svg"
-import viteLogo from "/vite.svg"
+import { Routes, Route } from "react-router-dom"
+
+import { Layout } from "./pages/Layout.js"
+import { Home } from "./pages/Home.js"
+import { About } from "./pages/About.js"
+import { Properties } from "./pages/Properties.js"
+import { NoMatch } from "./pages/NoMatch.js"
 import "./App.css"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>The future site of My Real Estate</h1>
-      <h2>A Vite + React Project</h2>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>Like</button>
-        <p>You liked this {count} times.</p>
-      </div>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="about" element={<About />} />
+          <Route path="properties" element={<Properties />} />
+          <Route path="*" element={<NoMatch />} />
+        </Route>
+      </Routes>
     </>
   )
 }

@@ -36,9 +36,9 @@ Clone the project, installs dependencies, and start dev server
 
 ## Acknowledgements
 
-- [FireCMS](https://firecms.co)
-- [Atomic10 Studio](https://atomic10.studio)
-- [Barely Fiction Design](https://barelyfiction.design)
+- [Barely Fiction Design](https://barelyfiction.design) - UI/UX Designer
+- [Atomic10 Studio](https://atomic10.studio) - Engineer
+- [FireCMS](https://firecms.co) - CMS Dashboard
 
 ---
 
